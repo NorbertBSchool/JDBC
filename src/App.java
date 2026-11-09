@@ -12,7 +12,6 @@ public class App extends JFrame {
     private final JTextField positionField = new JTextField();
     private final JTextField searchField = new JTextField();
     private final DefaultTableModel tableModel;
-    private final JTable table;
 
     public App() {
         try {
@@ -55,7 +54,8 @@ public class App extends JFrame {
                 return false;
             }
         };
-        table = new JTable(tableModel);
+
+        JTable table = new JTable(tableModel);
         table.setRowHeight(24);
 
         JScrollPane scrollPane = new JScrollPane(table);
